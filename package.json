@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack && node dist/bundle.js",
     "build": "webpack",
-    "deploy": "now --docker --alias rydechat-dev"
+    "deploy": "now --docker"
   },
   "repository": {},
   "author": "HacksNextDoor",
