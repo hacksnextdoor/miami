@@ -6,8 +6,6 @@ const app = express();
 const server = http.Server(app);
 const io = new SocketIO(server);
 const port = process.env.PORT || 3000;
-const db = {}
-
 
 // Start connection with service
 io.on('connection', (socket) => {
