@@ -24,13 +24,6 @@ io.on('connection', (socket) => {
 
   socket.on('send', (data) => {
     io.emit('send', data);
-
-    // Saving messages to mongo
-    const newMessage = new Message(data);
-    newMessage.save((err, message) => {
-      if (err) return console.log(err);
-      return console.log(`saved! ${message}`);
-    });
   });
 
   socket.on('unsubscribe', (channel) => {
